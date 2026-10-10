@@ -18,7 +18,7 @@ export async function initializeLanguage() {
   const desktop = window.imagePipesDesktop
   const locale = desktop?.getLanguage
     ? validateLocale(await desktop.getLanguage())
-    : validateLocale(localStorage.getItem(browserPreferenceKey) ?? 'zh-CN')
+    : validateLocale(localStorage.getItem(browserPreferenceKey) ?? 'en')
   await i18next.use(initReactI18next).init({
     lng: locale,
     supportedLngs: ['zh-CN', 'en'],

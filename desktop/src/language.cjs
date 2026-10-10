@@ -2,7 +2,7 @@ const { app } = require('electron')
 const fs = require('node:fs')
 const path = require('node:path')
 const chinese = require('./zh-CN.json')
-let language = 'zh-CN'
+let language = 'en'
 
 function validateLanguage(value) {
   if (value !== 'zh-CN' && value !== 'en') throw new Error('Invalid language preference')
